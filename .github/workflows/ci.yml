@@ -22,5 +22,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name:esed
+        name: esed
         path: /home/runner/work/esed/esed/target/x86_64-unknown-linux-musl/release/esed
