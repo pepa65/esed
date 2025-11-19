@@ -14,15 +14,15 @@
 
 ## The Pitch
 Why use it over any existing tools?
-* **Painless regular expressions** - `esed` uses regex syntax that is the same as JavaScript and Python.
+* **Painless regular expressions** - `esed` uses Rust regex syntax that is very feature-rich.
   Forget about dealing with quirks of `sed` or `awk` and get productive immediately.
-* **String-literal mode** - Non-regex search & replace: no more backslashes,
-  no more remembering which characters are special and need to be escaped.
 * **Easy to read, easy to write** - Search & replace expressions are split up, which makes them easy to read and write.
   No more messing with unclosed and escaped slashes.
-* **Easy to modify multiple files** - No for-loops needed, just list all files.
+* **Optional String-literal mode** - Non-regex search & replace: no more backslashes,
+  no more remembering which characters are special and need to be escaped.
+* **Easy to modify multiple files** - No for-loops needed, just list all files or use shell-wildcards.
 * **Smart, common-sense defaults** - Defaults follow common sense and are tailored for typical daily use.
-* **Still need `-i`/`--in-place` to modify files** - Defaults to output to stdout
+* **Still need `-i`/`--in-place` to modify files** - Defaults to output to stdout for safety.
 
 ### Comparison to `sed`
 While `sed` does a whole lot more, `esed` focuses on doing just one thing and doing it well.
@@ -55,7 +55,7 @@ Here are some cherry-picked examples where esed shines:
 * Non-unicode matching between `(?-u:` and `)`
 * Grouping between parentheses `( )` enables capturing patterns in the replacement and combining/grouping.
 * Named grouping between `(?P<NAME>` and `)`.
-* For full documentation, see: https://docs.rs/regex/latest/regex
+* For full documentation, see: https://docs.rs/regex/latest/regex/#syntax
 
 ### Benchmarks
 #### Simple replacement on ~1.5 gigabytes of JSON files
@@ -174,13 +174,6 @@ This will also be installed into `~/.cargo/bin/` and might need to be added to `
    ```sh
    esed 'from "react"' 'from "preact"' ../*/*.json
    ```
-
-### Escaping special characters
-To escape `$`, use `$$`:
-```sh
-echo "foo" |esed 'foo' '$$bar'
-# Result: "$bar"
-```
 
 ## Usage
 ```
