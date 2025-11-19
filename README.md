@@ -44,6 +44,19 @@ Here are some cherry-picked examples where esed shines:
   - **esed**: `esed -i SEARCH REPLACEMENT FILE* XFILE STHFILE`
   - **sed**: `for file in FILE* XFILE STHFILE; do sed -i -e 's/SEARCH/REPLACEMENT/g' "$file"; done`
 
+#### Notes on regex syntax
+* Common regex features like start & end anchors `^ #`, dot `.` wildcard (unicode) character matching,
+  character class matching between square brackets `[ ]` and character exclusion between `[^` and `]`.
+* Quantifiers (after the pattern): `*`: 0 or more, `+`: 1 or more, `?`: 0 or 1, `{n,m}`: between n and m times
+* Alternation: `|` matches either the pattern on the left or the right.
+* Escape special characters (`. * & $`) by prefixing with `\\`.
+* Special matchings: `\s`: whitespace, `\S`: non-whitespace, `\d`: digit, `\pL`: letter (any unicode class)
+  `\n`: newline, `\r`: carriagereturn, `\t`: tab
+* Non-unicode matching between `(?-u:` and `)`
+* Grouping between parentheses `( )` enables capturing patterns in the replacement and combining/grouping.
+* Named grouping between `(?P<NAME>` and `)`.
+* For full documentation, see: https://docs.rs/regex/latest/regex
+
 ### Benchmarks
 #### Simple replacement on ~1.5 gigabytes of JSON files
 ```sh
