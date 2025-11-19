@@ -49,7 +49,7 @@ Here are some cherry-picked examples where esed shines:
   character class matching between square brackets `[ ]` and character exclusion between `[^` and `]`.
 * Quantifiers (after the pattern): `*`: 0 or more, `+`: 1 or more, `?`: 0 or 1, `{n,m}`: between n and m times
 * Alternation: `|` matches either the pattern on the left or the right.
-* Escape special characters (`. * & $`) by prefixing with `\\`.
+* Escape special characters (`. * & $`) by prefixing with `\\`. In REPLACEMENT use `$$` to escape `$`.
 * Special matchings: `\s`: whitespace, `\S`: non-whitespace, `\d`: digit, `\pL`: letter (any unicode class)
   `\n`: newline, `\r`: carriagereturn, `\t`: tab
 * Non-unicode matching between `(?-u:` and `)`
