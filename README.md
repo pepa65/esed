@@ -5,7 +5,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pepa65/esed/blob/master/LICENSE)
 [![downloads](https://img.shields.io/crates/d/esed.svg)](https://crates.io/crates/esed)
 
-# esed 1.1.3
+# esed 1.1.4
 **Easy sed**
 * Repo: <https://github.com/pepa65/esed>
 * After: <https://github.com/chmln/sd> but changed the CLI
@@ -84,7 +84,7 @@ hyperfine --warmup 3 --export-markdown out.md \
 
 | Command | Mean [s] | Min…Max [s] |
 |:---|---:|---:|
-| `sed -E "s:(\w+):\1\1:g" dump.json >/dev/null` | 11.315 ± 0.215 | 11.1.3…11.725 |
+| `sed -E "s:(\w+):\1\1:g" dump.json >/dev/null` | 11.315 ± 0.215 | 11.1.4…11.725 |
 | `sed "s:\(\w\+\):\1\1:g" dump.json >/dev/null` | 11.239 ± 0.208 | 11.057…11.762 |
 | `esed "(\w+)" "$1$1" dump.json >/dev/null` | **0.942 ± 0.004** | 0.936…0.951 |
 
@@ -93,7 +93,7 @@ Result: **~11.93 times faster**
 ## Install
 ### Download and install static single-binary
 ```
-wget https://github.com/pepa65/esed/releases/download/1.1.3/esed
+wget https://github.com/pepa65/esed/releases/download/1.1.4/esed
 sudo mv esed /usr/local/bin
 sudo chown root:root /usr/local/bin/esed
 sudo chmod +x /usr/local/bin/esed
@@ -177,7 +177,7 @@ This will also be installed into `~/.cargo/bin/` and might need to be added to `
 
 ## Usage
 ```
-esed v1.1.3 - Easy sed
+esed v1.1.4 - Easy sed
 
 Usage: esed [OPTIONS] <SEARCH> <REPLACEMENT> [FILE]...
 Arguments:
