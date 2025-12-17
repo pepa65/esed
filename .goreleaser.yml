@@ -10,7 +10,6 @@ builds:
   - builder: rust
     targets:
       - x86_64-unknown-linux-musl
-      - aarch64-unknown-linux-gnu
 
 archives:
 - formats: binary
