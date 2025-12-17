@@ -10,13 +10,10 @@ builds:
   - builder: rust
     targets:
       - x86_64-unknown-linux-musl
-      - x86_64-apple-darwin
-      - x86_64-pc-windows-gnu
       - aarch64-unknown-linux-gnu
-      - aarch64-apple-darwin
 
 archives:
-- format: binary
+- formats: binary
 
 nfpms:
   - file_name_template: "{{ .ConventionalFileName }}"
@@ -25,6 +22,3 @@ nfpms:
       - deb
       - apk
       - rpm
-
-universal_binaries:
-  - replace: true
