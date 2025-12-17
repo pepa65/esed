@@ -6,6 +6,7 @@ stages:
 rust-latest:
   stage: build
   script:
+    - apt-get update -y
     - apt-get install -y upx musl-tools
     - cargo rel
     - mv target/x86_64-unknown-linux-musl/release/esed esed
