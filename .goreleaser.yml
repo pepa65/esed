@@ -8,8 +8,12 @@ before:
 
 builds:
   - builder: rust
+    ldflags: -s -w
     targets:
       - x86_64-unknown-linux-musl
+upx:
+  - enabled: true
+    compress: best
 
 archives:
 - formats: binary
