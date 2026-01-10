@@ -5,7 +5,7 @@
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pepa65/esed/blob/master/LICENSE)
 [![downloads](https://img.shields.io/crates/d/esed.svg)](https://crates.io/crates/esed)
 
-# esed 1.1.10
+# esed 1.1.11
 **Easy sed**
 * Repo: <https://github.com/pepa65/esed>
 * After: <https://github.com/chmln/sd> but changed the CLI
@@ -93,7 +93,7 @@ Result: **~11.93 times faster**
 ## Install
 ### Download and install static single-binary
 ```
-wget https://github.com/pepa65/esed/releases/download/1.1.10/esed
+wget https://github.com/pepa65/esed/releases/download/1.1.11/esed
 sudo mv esed /usr/local/bin
 sudo chown root:root /usr/local/bin/esed
 sudo chmod +x /usr/local/bin/esed
@@ -177,7 +177,7 @@ This will also be installed into `~/.cargo/bin/` and might need to be added to `
 
 ## Usage
 ```
-esed v1.1.10 - Easy sed
+esed v1.1.11 - Easy sed
 
 Usage: esed [OPTIONS] <SEARCH> <REPLACEMENT> [FILE]...
 Arguments:
