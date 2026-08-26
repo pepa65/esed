@@ -21,7 +21,7 @@ target-arch = "X86_64"
 
 [dependencies]
 clap = { version = "4", features = ["derive", "deprecated", "wrap_help"] }
-regex = "1"
+regex = "1.13"
 rayon = "1"
 memmap2 = "0.9"
 tempfile = "3"
